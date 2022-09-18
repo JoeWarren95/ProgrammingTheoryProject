@@ -25,11 +25,12 @@ public class DummyScript : MonoBehaviour
      *              - millenial: Dell computer with not such a block monitor, and respectable tower, not the latest n greatest, but affordable
      *              - zoomer: new age computer "AlienWare", with a flat screen monitor and RGB lights
      *      - dungeon enemy types: Zombie, Skeleton, Ogre
+     *              - Working Title: Programmer Dungeon Adventure
      *              - Dungeon Enemy Log: will display stats (maybe bars?) once clicked on, and play little sound
      *              - can all Move(), Attack(), Die()
-     *              - Zombie med speed, med attack, med health
-     *              - Skeleton high speed, med attack, low health
-     *              - Ogre slow speed, high attack, high health
+     *              - Zombie med speed, med attack, med health, has a zombie growl
+     *              - Skeleton high speed, med attack, low health, has bone clanking sounds
+     *              - Ogre slow speed, high attack, high health, has an ogre yell
      * Top Down, 3D, Orthographic
      */ 
 }
