@@ -38,4 +38,9 @@ public class MenuUIHandler : MonoBehaviour
         Application.Quit();
 #endif
     }
+
+    public void SayOgreLine()
+    {
+
+    }
 }

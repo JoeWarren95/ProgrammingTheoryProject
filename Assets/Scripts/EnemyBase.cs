@@ -6,13 +6,20 @@ public class EnemyBase : MonoBehaviour
 {
     //this script contains all the base functionality of the Enemies
 
+    //getters and setters for encapsulation
+    protected string enemyName { get; set; }
+    protected string enemyAttack { get; set; }
+
+    protected AudioSource audioSource;
+    //protected AudioClip enemyGrowl;
+    
     //shared functions amongst enemies:
     //Attack(), Growl(), Die()
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -21,6 +28,7 @@ public class EnemyBase : MonoBehaviour
         
     }
 
+    //these 3 functions are abstraction
     public virtual void Attack()
     {
         //this is where the enemy will say "I'm Attacking!"
