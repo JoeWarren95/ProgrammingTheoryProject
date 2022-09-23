@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyBase : MonoBehaviour
 {
@@ -8,16 +9,17 @@ public class EnemyBase : MonoBehaviour
 
     //getters and setters for encapsulation
     protected string enemyName { get; set; }
-    protected string enemyAttack { get; set; }
+    //protected string enemyAttack { get; set; }
+    [SerializeField] protected Text enemyAttack { get; set; }
+
 
     protected AudioSource audioSource;
-    //protected AudioClip enemyGrowl;
     
     //shared functions amongst enemies:
     //Attack(), Growl(), Die()
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
