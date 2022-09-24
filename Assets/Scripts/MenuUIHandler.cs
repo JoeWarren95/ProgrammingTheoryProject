@@ -12,19 +12,6 @@ public class MenuUIHandler : MonoBehaviour
 {
     //this script is responsible for handling all the UI in this game
 
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void StartNewGame()
     {
         SceneManager.LoadScene(1);

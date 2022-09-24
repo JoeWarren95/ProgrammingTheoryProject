@@ -3,26 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Derive this class from EnemyBase : inheritance
+//Derive this class from EnemyBase : INHERITANCE
 public class Skeleton : EnemyBase
 {
     public AudioClip skeletonSwipe;
     public AudioClip skeletonDeath;
     public AudioClip skeletonGrowl;
 
-    //this will be another instance of polymorphism
-    //make a volume variable to make this one sound airy/low (Polymorphism)
-
-    //need to set this enemy's name and attack (Encapsulation)
+    //need to set this enemy's name and attack (ENCAPSULATION)
     public Text skeletonAttack;
     public Text skeletonName;
 
+    //POLYMORPHISM (wherever you see an 'override')
     protected override void Start()
     {
         base.Start();
-
-        //Encapsulation
-        //enemyName = "*Gaspy breath* *translates to: 'Alex'*";
     }
 
     public override void Attack()
@@ -34,7 +29,6 @@ public class Skeleton : EnemyBase
         audioSource.PlayOneShot(skeletonSwipe);
     }
 
-    //may add in a parameter for this function
     public override void Growl()
     {
         skeletonName.text = "*translates to: 'I'm Alex'*";

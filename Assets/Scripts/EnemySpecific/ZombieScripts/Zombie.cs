@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Derive this class from EnemyBase : inheritance
+//Derive this class from EnemyBase : INHERITANCE
 public class Zombie : EnemyBase
 {
     public AudioClip zombieSwipe;
     public AudioClip zombieDeath;
     public AudioClip zombieGrowl;
 
-    //need to set this enemy's name and attack (Encapsulation)
+    //need to set this enemy's name and attack (ENCAPSULATION)
     public Text zombieAttack;
     public Text zombieName;
 
+    //POLYMORPHISM (wherever you see an 'override')
     protected override void Start()
     {
         base.Start();
-
-        //Encapsulation
     }
 
     public override void Attack()
@@ -48,22 +47,4 @@ public class Zombie : EnemyBase
         base.Die();
         audioSource.PlayOneShot(zombieDeath);
     }
-
-    /*protected IEnumerator TextFlash(Text zombieAttack)
-    {
-        ogreAttack.gameObject.SetActive(true);
-
-        float counter = 0;
-        float textAppearTime = 0.2f;
-
-        while (counter < textAppearTime)
-        {
-            counter += Time.deltaTime;
-            float time = counter / textAppearTime;
-            yield return null;
-        }
-
-        yield return new WaitForSeconds(1.0f);
-        ogreAttack.gameObject.SetActive(false);
-    }*/
 }

@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Derive this class from EnemyBase : inheritance
+//Derive this class from EnemyBase : INHERITANCE
 public class Ogre : EnemyBase
 {
     public AudioClip ogreGrowl;
     public AudioClip ogreSwipe;
     public AudioClip ogreDeath;
 
-    //maybe make a volume variable bc ogres should be loud (Polymorphism)
-
-    //need to set this enemy's name and attack (Encapsulation)
+    //need to set this enemy's name and attack (ENCAPSULATION)
     public Text ogreAttack;
     public Text ogreName;
 
+    //POLYMORPHISM (wherever you see an 'override')
     protected override void Start()
     {
         base.Start();
@@ -31,7 +30,6 @@ public class Ogre : EnemyBase
         audioSource.PlayOneShot(ogreSwipe);
     }
 
-    //may add in a parameter for this function
     public override void Growl()
     {
         ogreName.text = "translation: ME OLGUK";
