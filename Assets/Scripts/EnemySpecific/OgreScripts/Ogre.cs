@@ -14,29 +14,31 @@ public class Ogre : EnemyBase
 
     //need to set this enemy's name and attack (Encapsulation)
     public Text ogreAttack;
+    public Text ogreName;
 
     protected override void Start()
     {
         base.Start();
-
-        //Encapsulation
-        enemyName = "Me Olgut";
-        enemyAttack.text = "Club SMASH";
     }
 
     public override void Attack()
     {
+        ogreAttack.text = "club SMASH!!";
+
         base.Attack();
-        ogreAttack.enabled = true;
+        StartCoroutine(TextFlash(ogreAttack));
+
         audioSource.PlayOneShot(ogreSwipe);
-        ogreAttack.enabled = false;
     }
 
     //may add in a parameter for this function
     public override void Growl()
     {
+        ogreName.text = "translation: ME OLGUK";
         float modifier = Random.Range(0.8f, 1.3f); 
         base.Growl();
+        StartCoroutine(TextFlash(ogreName));
+
         audioSource.pitch = 1.0f * modifier;
         audioSource.PlayOneShot(ogreGrowl);
     }
